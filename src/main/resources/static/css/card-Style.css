@@ -1,0 +1,173 @@
+
+
+.card-title >img{
+	margin-left: 0px;
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+}
+.card-title >p{
+	margin-left: 75px;
+	margin-top: -35px;
+	font-size: 25px;
+	font-weight: 400;
+	color: white;
+
+
+}
+.card-body{
+    border: solid 2px wheat;
+	border-radius: 20px;
+	width: 300px;
+	height: 450px;
+	background: transparent;
+	margin-left: 50px;
+	margin-top: 50px;
+
+}
+.hr{
+	 border: solid 1px white;
+	margin-top: -5px;
+}
+.timer{
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-bottom: 50px;
+	font-size: 30px;
+	font-weight: 900;
+	
+}
+
+.hours,.minutes,.seconds{
+	padding-right: 10px;
+	padding-left: 10px;
+	font-weight: 100;
+	border-bottom: solid 1px ;
+
+	
+
+}
+.under-timer{
+	font-size: 15px;
+	margin-left: 23px;
+	margin-top: -40px;
+	padding-bottom: 2px;
+}
+.min-word{
+	font-size: 14px;
+	margin-left: 12px;
+	
+	}
+.sec-word{
+	font-size: 14px;
+	margin-left: 8px;
+	}
+.under-timer >span{
+	padding-right: 10px;
+	padding-left: 6px;
+}
+
+.card-body h1{
+	color: white;
+	margin-top: -20px;
+	padding-bottom: 5px;
+
+}
+.dashboard a{
+	margin-left: 90px;
+	margin-top: -10px;
+	margin-bottom: 40px;
+	background: white;
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px ;
+	font-size: 16px;
+	color: black;
+	font-weight: 900;
+	border: solid 0.1px black;
+	transition: 0.5s;
+	transition-property: background;
+	
+
+
+}
+.dashboard a:hover{
+	text-decoration: none;
+	background: green;
+	color: black;
+	
+	border: solid 0.1px black;
+	
+
+}
+
+.dashboard a:active{
+		outline: none;
+		
+
+	}
+
+.dashboard a:focus{
+		outline: none;
+	}
+
+
+
+#reset{
+	display: none;
+}
+
+.select-area{
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+.checkout-area >img{
+	width: 50px;
+	height: 50px;
+	margin-top: -5px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	padding-right: 5px;
+}
+
+.checkout-btn[type=submit]{
+	height: 40px;
+	width: 120px;
+	color: black;
+	font-weight: 900;
+	background: white;
+	font-size: 16px;
+	transition: 0.5s;
+	transition-property: background;
+	margin-top: -20px;
+		border: solid 0.1px;
+
+}
+.checkout-btn[type=submit]:hover{
+	background: wheat;
+	border: solid 0.1px;
+	color: black;
+}
+
+.add-item-btn[type=button]{
+	height: 40px;
+	width: 120px;
+	color: black;
+	font-weight: 900;
+	background: white;
+	font-size: 16px;
+	transition: 0.5s;
+	transition-property: background;
+	margin-top: -20px;
+		border: solid 0.1px;
+
+}
+
+
+.add-item-btn[type=button]:hover{
+
+	background: wheat;
+	color: black;
+	border: solid 0.1px;
+}
+

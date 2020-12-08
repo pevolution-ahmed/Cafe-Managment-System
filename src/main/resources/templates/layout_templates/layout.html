@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <link href="../webjars/bootstrap/4.5.0/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Insert title here</title>
+    <link th:href="@{/css/mainStyle.css}"  rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,400;1,800&display=swap"
+        rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="container">
+        <header th:replace="layout_templates/header :: header">
+            will be replaced
+        </header>
+        <div th:replace="layout_templates/sidebar :: sidebar">
+            will be replaced
+        </div>
+        <main layout:fragment="main-content">
+            <h1 class="primary">
+                This is from main layout
+            </h1>
+        </main>
+        <footer th:replace="layout_templates/footer :: footer">
+            will be replaced
+        </footer>
+
+    </div>
+
+    <script th:src="@{/js/jquery.min.js}" src="../webjars/jquery/3.5.1/dist/jquery.min.js"></script>
+    <script th:src="@{/js/bootstrap.min.js}" src="../webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script th:src="@{/js/clock.js}"></script>
+    <script th:src="@{/js/myscript.js}"></script>
+
+</body>
+
+</html>

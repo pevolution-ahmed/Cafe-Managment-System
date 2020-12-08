@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+    <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect02" th:field="*{typeOfDevice}">
+          <option selected value="null">Select Devices</option>
+          <option value="4K">4K</option>
+          <option value="Normal">Normal</option>
+          <option value="HD">HD</option>
+        </select>
+      
+        <div class="input-group-append">
+          <label class="input-group-text" for="inputGroupSelect02">Type</label>
+        </div>
+      </div>
+
+    
+<script src="../webjars/jquery/3.5.1/dist/jquery.min.js"></script>
+<script src="../webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>

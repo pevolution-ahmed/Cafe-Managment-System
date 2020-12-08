@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout_templates/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <title>Speed System</title>
+</head>
+
+<body>
+
+    <section layout:fragment="main-content">
+        <div style="margin-left: 250px;">
+            <h1 class="display-4">Products</h1>
+            <p class="lead">Product Management </p>
+            <hr class="my-4">
+            <form class="form my-2 my-lg-0">
+
+                <div class="input-group-prepend">
+                    <div class="input-group-text"> <label class="lead">Filter by: </label></div>
+                </div>
+
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose a Filter...</option>
+                    <option value="1">Name</option>
+                    <option value="2">Category</option>
+                    <option value="3">Price</option>
+                </select>
+                <br>
+                <br>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <br>
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <br>
+            <table class="table table-bordered ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Subcategory</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col" slot="2">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item: ${items}">
+                        <th scope="row" th:text="${item.name}">1</th>
+                        <td th:text="${item.category.name}">Mark</td>
+                        <td th:text="${item.category.subCategory}">Otto</td>
+                        <td th:text="${item.price}">@mdo</td>
+                        <td th:text="${item.stock}">Otto</td>
+                        <td>
+                            <a  th:href="@{/admin/dashboard/products/{id}/update(id=${item.id})}" class="btn btn-success">Update</a> |
+                             <a href="" th:href="@{/admin/dashboard/products/{id}/delete(id=${item.id})}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li th:if="${has_prev}">
+                        <a class="page-link" th:href="@{/admin/dashboard/products/{id}(id=${current_page-1})}" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li  class="page-item" th:each="pageNumber : ${pageNumbers}" th:classappend="${pageNumber==current_page } ? active">
+                        <a th:href="@{/admin/dashboard/products/{pageNumber}(pageNumber=${pageNumber})}" th:text="${pageNumber}"class="page-link" >1</a>
+                    </li>                   
+                    <li th:if="${has_next}" class="page-item">
+                        <a class="page-link" th:href="@{/admin/dashboard/products/{id}(id=${current_page+1})}" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</body>
+
+</html>

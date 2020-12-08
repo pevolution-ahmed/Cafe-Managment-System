@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout_templates/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,400;1,800&display=swap"
+        rel="stylesheet">
+    <title>Speed System</title>
+</head>
+
+<body>
+        <div class="sidebar" th:fragment="sidebar">
+            <div class="center">
+                <img th:src="@{/img/user_80px.png}" src="../img/user_80px.png" class="profile-img" alt="">
+                <h4>Welcome, <span>Admin</span></h4>
+            </div>
+            <a href="#">
+                <img  th:src="@{/img/home_64px.png}" src="../img/home_64px.png">
+                <span> Home</span>
+            </a>
+            <a href="#">
+                <img th:src="@{/img/product_100px.png}" src="../img/product_100px.png">
+                <span> Products</span>
+            </a>
+            <a href="#">
+                <img th:src="@{/img/report_card_80px.png}" src="../img/report_card_80px.png">
+                <span>Reports</span>
+            </a>
+            <a href="#">
+                <img th:src="@{/img/staff_80px.png}" src="../img/staff_80px.png">
+                <span>Staff</span>
+            </a>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>632</x>
+      <y>0</y>
+      <w>216</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>OrderReport
+--
+-orderTime:Time
+-totalPrice:int
+-orderFor:Role
+-staffName:String
+--
++getLoggedInUserName(user:User):User
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>320</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Category
+--
+-id:string
+-name:string
+-subCategory:string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>320</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Shpping Cart
+--
++lines:CartLine[]
++itemCount:int
++cartPrice:double
+--
+addLine(line:CartLine)
+updateQuantity(line:CartLine)
+removeLine(id)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>248</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Authentication
+--
+-loginService:LoginService
+-currentUser:User
+--
++IsAuthenticated():boolean
++login()
++logout()
++isAdmin(user:User):boolean
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>512</y>
+      <w>104</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>CartLine
+--
++item:Item
++quantity:int
+--
++getLineTotal():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>416</y>
+      <w>24</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>320</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+-id:string
+-name:string
+-category:Category
+-price:double
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>400</y>
+      <w>168</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;200.0;10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>352</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>0</y>
+      <w>248</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id:string
+-name:string
+-username:string
+-password:string
+-role:Role
+--
++addItemToCart(Item item,ShoppingCart cart)
++delItemFromCart(Item item,ShoppingCart cart)
++startTimer():Time
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>56</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>128</y>
+      <w>24</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>128</y>
+      <w>24</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>40</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>

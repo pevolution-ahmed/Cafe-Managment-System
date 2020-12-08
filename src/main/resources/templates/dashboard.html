@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout_templates/layout}">
+
+<head>
+  <title>dashboard</title>
+</head>
+
+<body class="homePage">
+  <br>
+  <div class="row dashboard" layout:fragment="main-content">
+    <div class="col-4" th:each="device:${devices}">
+      <!-- <form th:action="@{/dashboard/devices/{id}/redirect(id=${device.id})}" th:object="${card}">
+          <div class="card-body">
+            <h2 th:text="${device.name}"></h2>
+            <h1 class="card-title">
+              <lable class="hours">00</lable>:
+              <input th:field="*{cartTime.hours}" class="inp1" type="number" value="" hidden>
+              <lable class="minutes">00</lable>:
+              <input th:field="*{cartTime.minutes}" class="inp2" type="number" value="" hidden>
+              <lable class="seconds">00</lable>
+              <input th:field="*{cartTime.seconds}" type="number" class="inp3" value="" hidden>
+
+              <a href="#" class="btn btn-primary active" role="button" onclick="startTimer()"
+                aria-pressed="true">start</a>
+
+            </h1>
+
+            <div class="input-group mb-2">
+              <select class="custom-select" th:field="*{numberOfPlayer}">
+                <option selected value="null">Select number of players</option>
+                <option value="Single">Single</option>
+                <option value="Multi">Multi</option>
+              </select>
+              <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02">Type</label>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <select class="custom-select" id="inputGroupSelect02" th:field="*{typeOfDevice}">
+                <option selected value="null">Select Devices</option>
+                <option value="4K">4K</option>
+                <option value="Normal">Normal</option>
+                <option value="HD">HD</option>
+              </select>
+
+              <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02">Type</label>
+              </div>
+            </div>
+            <input type="submit" name="submit" class="btn btn-dark checkout-btn" value="Checkout">
+            <input type="submit" name="submit" class="btn btn-dark checkout-btn" value="addItems">
+            <button type="submit" class="btn btn-dark"> <a href="#"
+                th:href="@{/dashboard/devices/{id}/add-items(id=${device.id})}"> Add Item</button> -->
+      <!-- </div>
+
+        </form> -->
+
+      <form th:action="@{/staff/dashboard/devices/{id}/redirect(id=${device.id})}" th:object="${card}">
+
+        <div class="card-body">
+          <h1 class="card-title">
+            <img src="img/playstation.png" alt="" />
+            <p th:text="${device.name}">New Customer</p>
+            <hr class="hr">
+            <div class="timer">
+              <lable class="hours">00</lable> :
+              <input th:field="*{cartTime.hours}" class="inp1" type="number" value="" hidden>
+              <lable class="minutes">00</lable> :
+              <input th:field="*{cartTime.minutes}" class="inp2" type="number" value="" hidden>
+              <lable class="seconds">00</lable>
+              <input th:field="*{cartTime.seconds}" type="number" class="inp3" value="" hidden>
+            </div>
+            <div class="under-timer">
+              <span>Hours </span>
+              <span class="min-word">Minutes</span>
+              <span class="sec-word">Seconds</span>
+            </div>
+
+          </h1>
+          <a href="#" role="button" onclick="startStop()" aria-pressed="true" id="startStop">
+            Start</a>
+          <a href="#" role="button" onclick="reset()" aria-pressed="true" id="reset">
+            reset</a>
+
+     
+          <div class="input-group mb-2 select-area">
+            <select class="custom-select" th:field="*{numberOfPlayer}">
+              <option selected value="null">Select number of players</option>
+              <option value="Single">Single</option>
+              <option value="Multi">Multi</option>
+            </select>
+            <div class="input-group-append">
+              <label class="input-group-text" for="inputGroupSelect02">Type</label>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <select class="custom-select" id="inputGroupSelect02" th:field="*{typeOfDevice}">
+              <option selected value="null">Select Devices</option>
+              <option value="4K">4K</option>
+              <option value="Normal">Normal</option>
+              <option value="HD">HD</option>
+            </select>
+
+            <div class="input-group-append">
+              <label class="input-group-text" for="inputGroupSelect02">Type</label>
+            </div>
+          </div>
+          <div class="checkout-area">
+            <img th:src="@{/img/report_card_80px.png}" src="../img/report_card_80px.png">
+
+            <input type="submit" name="submit" class="btn btn-dark checkout-btn" value="addItems">
+
+
+            <img th:src="@{/img/report_card_80px.png}" src="../img/report_card_80px.png">
+            <input type="submit" name="submit" class="btn  checkout-btn" value="Checkout">
+          </div>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+</body>
+
+</html>

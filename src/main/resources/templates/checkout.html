@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout_templates/layout}">
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>checkout page</title>
+</head>
+
+<body>
+  <section layout:fragment="main-content" style="margin-left: 200px;">
+    <h1 class="display-4">Checkout</h1>
+    <p class="lead">Product Management </p>
+    <hr class="my-4">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Device Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Player Numbers</th>
+          <th scope="col">Estimated Time</th>
+          <th scope="col">Pill</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th th:text="${deviceName}" scope="row"></th>
+          <td th:text="${deviceType}">null</td>
+          <td th:text="${devicePlayerNumber}">null</td>
+          <td th:text="${deviceTime}">null</td>
+          <td th:text="${devicePrice}">null</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+</body>
+
+</html>
